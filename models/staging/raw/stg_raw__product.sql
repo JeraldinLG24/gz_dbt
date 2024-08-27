@@ -10,10 +10,12 @@ renamed as (
 
     select
         products_id,
-        purchse_price as purchase_price
+        SAFE_CAST(purchse_price AS FLOAT64) AS purchase_price
 
     from source
 
 )
 
 select * from renamed
+
+
