@@ -6,10 +6,7 @@
      revenue -(quantity * purchase_price) as margin,
      quantity * purchase_price as purchase_cost
 from
-    {{ref('stg_raw__sales')}}
-left join
-    {{ref('stg_raw__product')}}
-using(products_id)
+    {{ref('int_sales_margin')}}
 left join
     {{ref('stg_raw__ship')}}
 using(orders_id)
