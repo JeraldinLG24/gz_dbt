@@ -1,4 +1,3 @@
-
  select
      orders_id,
      date_date,
@@ -11,3 +10,6 @@ from
 left join
     {{ref('stg_raw__product')}}
 using(products_id)
+left join
+    {{ref('stg_raw__ship')}}
+using(orders_id)
