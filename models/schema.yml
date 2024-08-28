@@ -37,9 +37,29 @@ sources:
               - not_null
       - name: adwords
         identifier: raw_gz_adwords
+        columns:
+          - name: campaign_key
+            tests:
+              - unique
+              - not_null
       - name: bing
         identifier: raw_gz_bing
+        columns:
+          - name: campaign_key
+            tests:
+              - unique
+              - not_null
       - name: criteo
         identifier: raw_gz_criteo
+        columns:
+          - name: campaign_key
+            tests:
+              - unique
+              - not_null
       - name: facebook
         identifier: raw_gz_facebook   
+        columns:
+          - name: campaign_key
+            tests:
+              - unique
+              - not_null
